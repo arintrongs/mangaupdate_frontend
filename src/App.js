@@ -124,7 +124,7 @@ class App extends Component {
     let formData = new FormData();
     formData.append('genres', genres);
     formData.append('steps', steps);
-    var response = await fetch("/predict",
+    var response = await fetch("/5931075421/predict",
     {
       method: 'post',
       body : formData
@@ -183,7 +183,7 @@ class App extends Component {
         <Graph>
           {
             (this.state.predicted == false)?"Waiting..":<div><h1>Predicted "{this.state.genres}" {this.state.steps} steps ahead</h1>
-              <img src={"http://localhost:8000/"+this.state.img}/><br/> Mean Square Error : {this.state.mse}</div>
+              <img src={"http://159.89.197.13/"+this.state.img}/><br/> Mean Square Error : {this.state.mse}</div>
           }
           
         </Graph>
